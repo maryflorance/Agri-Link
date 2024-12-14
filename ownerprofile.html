@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Owner Profile</title>
+    <link rel="stylesheet" href="stylings.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="shopowner_home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="ownerprofile.html">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+        </header>
+
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img id="profile-image" src="" alt="Profile Photo" />
+            </div>
+
+            <div class="profile-details">
+                <p><strong>Shop Owner Name:</strong> <span id="shopowner-name"></span></p>
+                <p><strong>Phone Number:</strong> <span id="phone-number"></span></p>
+                <p><strong>Shop Name:</strong> <span id="shop-name"></span></p>
+                <p><strong>Shop Location:</strong> <span id="shop-location"></span></p>
+                <p><strong>Pesticide Name:</strong> <span id="pesticide-name"></span></p>
+            </div>
+
+            <div class="edit-button-container">
+                <button id="edit-button" onclick="editProfile()">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const savedData = JSON.parse(localStorage.getItem("shopownerDetails"));
+            if (savedData) {
+                // Set the profile photo
+                document.getElementById("profile-image").src = savedData.image;
+
+                // Set the details
+                document.getElementById("shopowner-name").textContent = savedData.name;
+                document.getElementById("phone-number").textContent = savedData.phone;
+                document.getElementById("shop-name").textContent = savedData.shopName;
+                document.getElementById("shop-location").textContent = savedData.location;
+                document.getElementById("pesticide-name").textContent = savedData.pesticide;
+            } else {
+                alert("No data found. Please fill in the details on the shop owner home page.");
+            }
+        };
+
+        function editProfile() {
+            // Redirect to the shopowner_home.html page for editing
+            window.location.href = "shopowner_home.html";
+        }
+    </script>
+</body>
+</html>

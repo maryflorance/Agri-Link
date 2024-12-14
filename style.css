@@ -1,0 +1,305 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #fdfdfd, #f9f9f9);
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 28px;
+  color: #fff; /* White text */
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-title:hover {
+  transform: scale(1.1);
+  color: #f39c12; /* Gold color */
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #fff; /* White text */
+  font-size: 16px;
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12; /* Gold color on hover */
+  transform: scale(1.1);
+}
+
+/* Lower Top Bar for Login & Sign Up Dropdown */
+.lower-top-bar {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lower-top-bar .dropdown-menu {
+  animation: fadeInDropdown 0.5s ease-out;
+}
+
+.lower-top-bar .btn {
+  color: #007bff;
+  font-size: 16px;
+  border: 1px solid #007bff;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lower-top-bar .btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  padding-top: 60px;
+  z-index: 10;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make sure the body and html take up the full height of the page */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Main content section that grows to fill available space */
+.main-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer at the bottom of the page */
+footer {
+  margin-top: auto;  /* This pushes the footer to the bottom */
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.sidebar ul li {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #18bc9c;
+  background-color: #34495e;
+  border-radius: 5px;
+}
+
+.open-btn, .close-btn {
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #2c3e50;
+  transition: transform 0.3s ease;
+}
+
+.open-btn:hover, .close-btn:hover {
+  color: #18bc9c;
+  transform: scale(1.2);
+}
+
+/* Header Section */
+#home {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  color: #fff;
+  padding: 100px 20px;
+}
+
+#home .sub-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #ffe4d0;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #ff5e62;
+  margin-bottom: 30px;
+}
+
+/* Catalog Styles */
+.catalog-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.catalog-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.details {
+  padding: 20px;
+  text-align: left;
+}
+
+.details h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.details p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.details a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background: #ff5e62;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.details a:hover {
+  background: #ff9966;
+}
+
+
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+form {
+  margin: 50px auto;
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus, form select:focus {
+  box-shadow: 0 0 8px rgba(24, 188, 156, 0.8);
+  border-color: #18bc9c;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #18bc9c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInDropdown {
+  0% { opacity: 0; transform: scaleY(0.9); }
+  100% { opacity: 1; transform: scaleY(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

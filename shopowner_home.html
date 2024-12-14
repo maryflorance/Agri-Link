@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Owner Home</title>
+    <link rel="stylesheet" href="stylings.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="shopowner_home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="ownerprofile.html">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Welcome, Shop Owner</h1>
+            <p>Securely connect with farmers and stock high-quality products. Share details about your shop, the pesticides you sell, and ensure transparency to build trust with farmers and customers alike.</p>
+        </header>
+
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img id="profile-image" src="" alt="Profile Photo" />
+            </div>
+
+            <form id="shopowner-details-form">
+                <label for="shopowner-name">Shop Owner Name:</label>
+                <input type="text" id="shopowner-name" placeholder="Enter your name" required>
+                
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" placeholder="Enter your phone number" required>
+                
+                <label for="shop-name">Shop Name:</label>
+                <input type="text" id="shop-name" placeholder="Enter your shop name" required>
+                
+                <label for="shop-location">Shop Location:</label>
+                <input type="text" id="shop-location" placeholder="Enter shop location" required>
+                
+                <label for="pesticide-name">Pesticide Name:</label>
+                <input type="text" id="pesticide-name" placeholder="Enter pesticide name" required>
+                
+                <label for="shopowner-image">Upload Profile Image:</label>
+                <input type="file" id="shopowner-image" accept="image/*">
+                
+                <button type="submit">Save Details</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const profileImageInput = document.getElementById("shopowner-image");
+        const profileImageDisplay = document.getElementById("profile-image");
+
+        // Load saved data from localStorage
+        window.onload = function() {
+            const savedData = JSON.parse(localStorage.getItem("shopownerDetails"));
+            if (savedData) {
+                document.getElementById("shopowner-name").value = savedData.name;
+                document.getElementById("phone-number").value = savedData.phone;
+                document.getElementById("shop-name").value = savedData.shopName;
+                document.getElementById("shop-location").value = savedData.location;
+                document.getElementById("pesticide-name").value = savedData.pesticide;
+                profileImageDisplay.src = savedData.image;
+            }
+        };
+
+        // Handle the profile image upload
+        profileImageInput.addEventListener("change", function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                profileImageDisplay.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        // Save details to localStorage on form submission
+        const form = document.getElementById("shopowner-details-form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const shopOwnerName = document.getElementById("shopowner-name").value;
+            const phoneNumber = document.getElementById("phone-number").value;
+            const shopName = document.getElementById("shop-name").value;
+            const shopLocation = document.getElementById("shop-location").value;
+            const pesticideName = document.getElementById("pesticide-name").value;
+            const shopOwnerImage = profileImageDisplay.src;
+
+            const shopownerDetails = {
+                name: shopOwnerName,
+                phone: phoneNumber,
+                shopName: shopName,
+                location: shopLocation,
+                pesticide: pesticideName,
+                image: shopOwnerImage
+            };
+
+            // Save to localStorage
+            localStorage.setItem("shopownerDetails", JSON.stringify(shopownerDetails));
+
+            alert("Shop owner details saved!");
+        });
+    </script>
+</body>
+</html>

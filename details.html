@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Details</title>
+    <link rel="stylesheet" href="stylings.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="farmerhome.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-photo">
+            <img src="default-profile.jpg" alt="Profile" id="profileImg" class="profile-img" onclick="openSidebar()">
+        </div>
+        <div class="profile-info">
+            <h2>Farmer Profile</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Farm Location:</strong> California</p>
+            <p><strong>Crop Name:</strong> Corn</p>
+            <p><strong>Season Details:</strong> Summer 2024</p>
+            <a href="edit-details.html" class="btn">Edit Details</a>
+        </div>
+    </div>
+
+    <!-- Sidebar for Edit Details -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <button onclick="closeSidebar()">Close</button>
+            <h3>Edit Profile</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="John Doe">
+                <label for="farmLocation">Farm Location:</label>
+                <input type="text" id="farmLocation" value="California">
+                <label for="cropName">Crop Name:</label>
+                <input type="text" id="cropName" value="Corn">
+                <label for="season">Season Details:</label>
+                <input type="text" id="season" value="Summer 2024">
+                <label for="profileImage">Profile Image:</label>
+                <input type="file" id="profileImage" onchange="previewImage(event)">
+                <button type="submit" class="btn">Update Details</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Farmer Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Home</title>
+    <link rel="stylesheet" href="stylings.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="farmerhome.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Welcome, Farmer</h1>
+            <p>Securely sell your farm-fresh products on our platform! Showcase your unique farming techniques, the pesticides you use, crop growth conditions, and the steps you take to ensure your products are healthy and high-quality. Build trust with customers by sharing the story behind your farm and the care you put into every product.</p>
+        </header>
+
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img id="profile-image" src="" alt="Profile Photo" />
+            </div>
+
+            <form id="farmer-details-form">
+                <label for="farmer-name">Farmer Name:</label>
+                <input type="text" id="farmer-name" placeholder="Enter your name" required>
+                
+                <label for="farm-location">Farm Location:</label>
+                <input type="text" id="farm-location" placeholder="Enter farm location" required>
+                
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" placeholder="Enter crop name" required>
+                
+                <label for="season-details">Season Details:</label>
+                <input type="text" id="season-details" placeholder="Enter season details" required>
+                
+                <label for="farmer-image">Upload Profile Image:</label>
+                <input type="file" id="farmer-image" accept="image/*">
+                
+                <button type="submit">Save Details</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const profileImageInput = document.getElementById("farmer-image");
+        const profileImageDisplay = document.getElementById("profile-image");
+
+        // Load saved data from localStorage
+        window.onload = function() {
+            const savedData = JSON.parse(localStorage.getItem("farmerDetails"));
+            if (savedData) {
+                document.getElementById("farmer-name").value = savedData.name;
+                document.getElementById("farm-location").value = savedData.location;
+                document.getElementById("crop-name").value = savedData.crop;
+                document.getElementById("season-details").value = savedData.season;
+                profileImageDisplay.src = savedData.image;
+            }
+        };
+
+        // Handle the profile image upload
+        profileImageInput.addEventListener("change", function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                profileImageDisplay.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        // Save details to localStorage on form submission
+        const form = document.getElementById("farmer-details-form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const farmerName = document.getElementById("farmer-name").value;
+            const farmLocation = document.getElementById("farm-location").value;
+            const cropName = document.getElementById("crop-name").value;
+            const seasonDetails = document.getElementById("season-details").value;
+            const farmerImage = profileImageDisplay.src;
+
+            const farmerDetails = {
+                name: farmerName,
+                location: farmLocation,
+                crop: cropName,
+                season: seasonDetails,
+                image: farmerImage
+            };
+
+            // Save to localStorage
+            localStorage.setItem("farmerDetails", JSON.stringify(farmerDetails));
+
+            alert("Farmer details saved!");
+        });
+    </script>
+</body>
+</html>

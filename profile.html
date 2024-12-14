@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile</title>
+    <link rel="stylesheet" href="stylings.css">
+</head>
+<body>
+    <nav>
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="farmerhome.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+        </header>
+
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img id="profile-image" src="" alt="Profile Photo" />
+            </div>
+
+            <div class="farmer-details">
+                <p><strong>Farmer Name:</strong> <span id="farmer-name"></span></p>
+                <p><strong>Farm Location:</strong> <span id="farm-location"></span></p>
+                <p><strong>Crop/Food item Name:</strong> <span id="crop-name"></span></p>
+                <p><strong>Season Details:</strong> <span id="season-details"></span></p>
+            </div>
+
+            <a href="farmerhome.html"><button>Edit Details</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Load saved data from localStorage
+        window.onload = function() {
+            const savedData = JSON.parse(localStorage.getItem("farmerDetails"));
+            if (savedData) {
+                document.getElementById("farmer-name").textContent = savedData.name;
+                document.getElementById("farm-location").textContent = savedData.location;
+                document.getElementById("crop-name").textContent = savedData.crop;
+                document.getElementById("season-details").textContent = savedData.season;
+                document.getElementById("profile-image").src = savedData.image;
+            } else {
+                alert("No profile data found.");
+            }
+        };
+    </script>
+</body>
+</html>

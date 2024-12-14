@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your one-stop shop for organic vegetables and fruits.">
+    <title>AgriLink</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First Top Bar with Project Title (Updated Larger Size) -->
+    <div class="top-bar py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="project-title animate-fade-in">
+                AgriLink
+            </a>
+            <!-- Navigation Links -->
+            <div class="d-flex">
+                <a class="nav-link animate-slide-up" href="#">Home</a>
+                <a class="nav-link animate-slide-up" href="#about">About</a>
+
+                <!-- Pages Dropdown -->
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle animate-slide-up" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <li><a class="dropdown-item" href="#features">Features</a></li>
+                        <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <a class="nav-link animate-slide-up" href="#services">Services</a>
+                <a class="nav-link animate-slide-up" href="#contact">Contact</a>
+            </div>
+            <!-- Login & Sign Up Dropdowns -->
+            <div class="d-flex">
+                <div class="dropdown me-3">
+                    <a class="nav-link dropdown-toggle animate-fade-in" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <li><a class="dropdown-item" href="user_login.html">User Login</a></li>
+                        <li><a class="dropdown-item" href="farmer_login.html">Farmer Login</a></li>
+                        <li><a class="dropdown-item" href="shopowner_login.html">Shop Owner Login</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle animate-fade-in" href="#" id="signupDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sign Up
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="signupDropdown">
+                        <li><a class="dropdown-item" href="user_registration.html">User Registration</a></li>
+                        <li><a class="dropdown-item" href="farmer_registration.html">Farmer Registration</a></li>
+                        <li><a class="dropdown-item" href="shopowner_registration.html">Shop Owner Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Organic Vegetables and Fruits Section -->
+<section class="container my-5 text-center">
+    <div class="row g-4">
+        <!-- Organic Vegetables -->
+        <div class="col-md-4">
+            <div class="p-4 bg-success text-white rounded shadow animate-card">
+                <img src="collections/vegi.jpg" alt="Organic Vegetables" class="img-fluid rounded mb-3">
+                <h3>Organic Vegetables</h3>
+                <p>Fresh, locally sourced, and organic vegetables for a healthier lifestyle.</p>
+            </div>
+        </div>
+
+        <!-- Content in between the two sections -->
+        <div class="col-md-4">
+            <div class="p-4 bg-light text-dark rounded shadow">
+                <h4>Explore the Best of Nature</h4>
+                <p>We offer a wide range of healthy organic products to choose from. Discover fresh vegetables and fruits that are sustainably grown and harvested with care. Our commitment to organic farming means that our products are free from harmful pesticides and chemicals, ensuring that you receive the highest quality produce directly from nature’s bounty. Whether you are looking to improve your health, support local farmers, or make environmentally conscious choices, we provide fresh, organic options to meet your needs. Experience the true flavors of farm-to-table goodness with every bite! Our products are not only beneficial to your health but also contribute to a more sustainable and eco-friendly future. By choosing organic, you are investing in a cleaner, greener planet for future generations.</p>
+            </div>
+        </div>
+
+        <!-- Organic Fruits -->
+        <div class="col-md-4">
+            <div class="p-4 bg-warning text-dark rounded shadow animate-card">
+                <img src="collections/fruits.jpg" alt="Organic Fruits" class="img-fluid rounded mb-3">
+                <h3>Organic Fruits</h3>
+                <p>Enjoy the taste of organic fruits, full of natural goodness.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="animate-fade-in">About Us</h2>
+            <p class="lead">We are dedicated to providing high-quality organic produce directly from farms to your table. At AgriShop, we ensure freshness and transparency in every step of our supply chain.</p>
+            <img src="collections/abouts.jpg" alt="About Us" class="img-fluid rounded shadow">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-secondary text-white">
+        <div class="container text-center">
+            <h2>Customer Testimonials</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded shadow animate-card">
+                        <h3>★★★★★</h3>
+                        <p>Excellent service and fresh produce!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded shadow animate-card">
+                        <h3>★★★★★</h3>
+                        <p>Highly recommend for organic lovers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded shadow animate-card">
+                        <h3>★★★★★</h3>
+                        <p>Affordable prices and great quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="animate-fade-in">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="collections/fresh.jpg" alt="Service 1" class="img-fluid rounded shadow animate-card">
+                    <h4>Fresh Produce Delivery</h4>
+                </div>
+                <div class="col-md-4">
+                    <img src="collections/org farm.jpg" alt="Service 2" class="img-fluid rounded shadow animate-card">
+                    <h4>Organic Farming Consulting</h4>
+                </div>
+                <div class="col-md-4">
+                    <img src="collections/trans sup.jpg" alt="Service 3" class="img-fluid rounded shadow animate-card">
+                    <h4>Transparent Supply Chain</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Features Section (Updated Background) -->
+<section id="features" class="py-5 text-white" style="background-color: #ffd1b3;">
+    <div class="container text-center features-box">
+        <h2>Features</h2>
+        <ul class="list-group">
+            <li class="list-group-item feature-item">Fresh Farm Produce</li>
+            <li class="list-group-item feature-item">100% Organic Guarantee</li>
+            <li class="list-group-item feature-item">Flexible Payment Options</li>
+        </ul>
+    </div>
+</section>
+
+
+
+    <!-- Why Choose Us Section (Updated Background) -->
+<section id="why-choose-us" class="py-5 text-dark" style="background-color: #ffffff;">
+    <div class="container text-center">
+        <img src="collections/why.jpg" alt="Why Choose Us" class="img-fluid rounded shadow animate-card">
+        <div>
+            <h2>Why Choose Us?</h2>
+            <p>We are committed to quality, sustainability, and customer satisfaction. Choose AgriShop for the best organic experience! Our products are sourced from trusted farmers, ensuring that every item is fresh, healthy, and responsibly grown. With flexible delivery options, we make it easy for you to enjoy organic produce right at your doorstep.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section (Enhanced) -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="animate-fade-in mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+            <!-- Comment Section Box -->
+<!-- Comment Section Box -->
+<div class="col-md-5 mb-4">
+    <div class="comment-box p-4 bg-white shadow rounded">
+        <h3 class="mb-4 text-center">Ask Your Queries</h3> <!-- Heading Added -->
+        <form name="submit-to-google-sheet">
+            <div class="mb-4">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="mb-4">
+                <label for="comment" class="form-label">Your Query</label>
+                <textarea class="form-control" id="comment" rows="4" placeholder="Leave your comment here" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+// JavaScript to handle comment submission and display in the testimonials section
+document.getElementById('comment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    // Create new testimonial item
+    const testimonial = document.createElement('div');
+    testimonial.classList.add('col-md-4', 'mb-4');
+    testimonial.innerHTML = `
+        <div class="testimonial-box p-4 bg-white shadow rounded">
+            <p><strong>${name}</strong></p>
+            <p>${comment}</p>
+        </div>
+    `;
+
+    // Add the new testimonial to the testimonials section
+    document.getElementById('testimonials-list').appendChild(testimonial);
+
+    // Clear the form
+    document.getElementById('comment-form').reset();
+});
+</script>
+
+
+            <!-- Contact Information Box -->
+            <div class="col-md-5 mb-4">
+                <div class="contact-info-box p-4 bg-white shadow rounded">
+                    <h4>Our Contact Details</h4>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-telephone-fill me-3" style="font-size: 1.2em;"></i>
+                            <strong>Phone:</strong> 
+                            <a href="tel:+11234567890" class="text-dark ms-2">+1 (123) 456-7890</a>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope-fill me-3" style="font-size: 1.2em;"></i>
+                            <strong>Email:</strong> 
+                            <a href="mailto:contact@agrishop.com" class="text-dark ms-2">contact@agrishop.com</a>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt-fill me-3" style="font-size: 1.2em;"></i>
+                            <strong>Address:</strong> 123 Farm Road, Cityville, Country
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="text-center">
+                        <p class="text-muted">We'd love to hear from you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<!-- FAQ Section -->
+<section id="faq" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-5">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is the best way to contact you?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can contact us via the contact form or by reaching out through our provided email and phone number.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I know if my order has been processed?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You will receive an email notification once your order has been successfully processed and shipped.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I modify my order after it has been placed?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Once the order is placed, it cannot be modified. Please contact our support team immediately if you need any adjustments.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        What payment methods do you accept?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Do you offer international shipping?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer international shipping to most countries. Shipping fees and delivery times vary based on your location.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        What is your return policy?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We accept returns within 30 days of purchase. Items must be unused and in their original packaging.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        How can I track my order?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You will receive a tracking number once your order has been shipped. You can use this number to track your order on our website or through the courier's tracking portal.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section ends here-->
+
+<!-- Social Media Section -->
+<section id="social" class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-5">Follow Us</h2>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="me-4">
+                <i class="bi bi-facebook" style="font-size: 1.5em;"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="me-4">
+                <i class="bi bi-twitter" style="font-size: 1.5em;"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="me-4">
+                <i class="bi bi-instagram" style="font-size: 1.5em;"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="me-4">
+                <i class="bi bi-linkedin" style="font-size: 1.5em;"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 AgriLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHwhkaic4g2FOr8ni_Ou4s2yteFtZ-am_GWeMt3PMGa1sndYbKbaRhTfoQMA-ne3eo/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdfdfd;
+        }
+
+        .container-fluid {
+            padding: 50px 0;
+            background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-primary {
+            color: #ff5e62 !important;
+        }
+
+        .product-carousel .product-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-carousel .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-carousel .product-item img {
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.5s ease;
+        }
+
+        .product-carousel .product-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-carousel h6 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-carousel .btn {
+            border: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .product-carousel .btn:hover {
+            transform: translateY(-3px);
+            background: #ff9966 !important;
+        }
+
+        .btn.bg-primary {
+            background: #ff5e62 !important;
+        }
+
+        .btn.bg-secondary {
+            background: #6c757d !important;
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">AgriLink</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages.html">Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+    <!-- Navbar End -->
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
+                <h1 class="display-5">DAIRY PRODUCTS</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/milk.jpg" alt="Milk">
+                        <h6>Milk</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/curd.jpg" alt="Curd">
+                        <h6>Curd</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/cheese.jpg" alt="Cheese">
+                        <h6>Cheese</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/butter.jpg" alt="Butter">
+                        <h6>Butter</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/cream.jpg" alt="Cream">
+                        <h6>Cream</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
+                        <img class="img-fluid" src="collections/paneer.jpg" alt="Paneer">
+                        <h6>Paneer</h6>
+                        <h5 class="text-primary">Shop</h5>
+                        <div class="btn-action d-flex justify-content-center mt-3">
+                            <a class="btn bg-primary py-2 px-3 me-2" href="team.html"><i class="fas fa-cart-plus text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="#"><i class="fas fa-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 AgriLink. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

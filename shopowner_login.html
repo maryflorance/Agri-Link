@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopowner Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="Shopowner-login">
+    <style>
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .heading {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        form input, .submit-btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="user-login">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="heading">AgriLink</span>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            
+            <a href="index.html#pages">Pages</a>
+                
+            
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Shopowner Login</h2>
+        <form id="Shopowner-login-form">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Redirect to farmerhome.html when login is successful
+        document.getElementById("Shopowner-login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Perform validation or authentication logic here (if needed)
+            window.location.href = "Shopowner_home.html"; // Redirect to farmerhome.html
+        });
+    </script>
+</body>
+</html>

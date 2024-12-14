@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function redirectToLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'farmer_login.html'; // Redirect to farmer login page
+        }
+    </script>
+</head>
+<body class="farmer-registration">
+    <style>
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .heading {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        form input, .submit-btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="user-login">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="heading">AgriLink</span>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#pages">Pages</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Farmer Registration</h2>
+        <form onsubmit="redirectToLogin(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            <label for="crops">Select Crop Type:</label>
+            <select id="crops" name="crops" required>
+                <option value="">--Select Crop--</option>
+                <optgroup label="Vegetables">
+                    <option value="tomato">Tomato</option>
+                    <option value="potato">Potato</option>
+                    <option value="carrot">Carrot</option>
+                    <option value="spinach">Spinach</option>
+                    <option value="broccoli">Broccoli</option>
+                    <option value="cabbage">Cabbage</option>
+                </optgroup>
+                <optgroup label="Grains">
+                    <option value="rice">Rice</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="corn">Corn</option>
+                    <option value="barley">Barley</option>
+                    <option value="oats">Oats</option>
+                    <option value="sorghum">Sorghum</option>
+                </optgroup>
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="mango">Mango</option>
+                    <option value="grape">Grape</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="strawberry">Strawberry</option>
+                </optgroup>
+            </select>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <div class="login-link">
+            <p>Already have an account?</p>
+            <button onclick="window.location.href='farmer_login.html'">Login</button>
+        </div>
+    </div>
+</body>
+</html>
