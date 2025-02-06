@@ -2,412 +2,264 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your one-stop shop for organic vegetables and fruits.">
-    <title>AgriLink</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Personal Portfolio Website Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- First Top Bar with Project Title (Updated Larger Size) -->
-    <div class="top-bar py-4">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="project-title animate-fade-in">
-                AgriLink
-            </a>
-            <!-- Navigation Links -->
-            <div class="d-flex">
-                <a class="nav-link animate-slide-up" href="#">Home</a>
-                <a class="nav-link animate-slide-up" href="#about">About</a>
+    <!---------------------header------------------------>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="collection/logo.png.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Full-Stack developer</p>
+            <h1>Hi, I'm <span>Mary</span><br>Florance From India</h1>
+        </div>
+    </div>
+</div>
+<!--------------------about------------------------>
+<div id="about">
+    <div class="container"> 
+        <div class="row">
+            <div class="about-col-1">
+                <img src="collection/user.png.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate and skilled Full-Stack Developer with expertise in Java, Django, and MongoDB,
+                     along with proficiency in Python, C, HTML, CSS, and JavaScript. 
+                     I have a strong foundation in developing efficient and scalable solutions, with a keen interest in solving complex technical challenges.
+                      As a quick learner and adaptable team player, I am eager to apply my skills in real-world projects. Driven by innovation,
+                     I am committed to continuous learning and excited to contribute to impactful technology solutions.</p>
 
-                <!-- Pages Dropdown -->
-                <div class="dropdown">
-                    <a class="nav-link dropdown-toggle animate-slide-up" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Pages
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-                        <li><a class="dropdown-item" href="#features">Features</a></li>
-                        <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java Full Stack</span><br>Advance level in Java Programming</li>
+                        <li><span>Python</span><br>Advance level in Python Programming</li>
+                        <li><span>SQL</span><br>Intermediate level in SQL</li>
                     </ul>
                 </div>
-                
-                <a class="nav-link animate-slide-up" href="#services">Services</a>
-                <a class="nav-link animate-slide-up" href="#contact">Contact</a>
-            </div>
-            <!-- Login & Sign Up Dropdowns -->
-            <div class="d-flex">
-                <div class="dropdown me-3">
-                    <a class="nav-link dropdown-toggle animate-fade-in" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Login
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="loginDropdown">
-                        <li><a class="dropdown-item" href="user_login.html">User Login</a></li>
-                        <li><a class="dropdown-item" href="farmer_login.html">Farmer Login</a></li>
-                        <li><a class="dropdown-item" href="shopowner_login.html">Shop Owner Login</a></li>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>June 2024 - Aug 2024</span><br>Full Stack development Intern</li>
+                        <li><span>June 2023 - Aug 2023</span><br>IOT Intern</li>
                     </ul>
                 </div>
-                <div class="dropdown">
-                    <a class="nav-link dropdown-toggle animate-fade-in" href="#" id="signupDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sign Up
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="signupDropdown">
-                        <li><a class="dropdown-item" href="user_registration.html">User Registration</a></li>
-                        <li><a class="dropdown-item" href="farmer_registration.html">Farmer Registration</a></li>
-                        <li><a class="dropdown-item" href="shopowner_registration.html">Shop Owner Registration</a></li>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Btech</span><br>2021-current<br>KKR And KSR Institute of Technology & Sciences</li>
+                        <li><span>Intermediate</span><br>2019-2021<br>VJ Junior College</li>
+                        <li><span>10th</span><br>2018-2019<br>Sri Chaitanya School</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-<!-- Organic Vegetables and Fruits Section -->
-<section class="container my-5 text-center">
-    <div class="row g-4">
-        <!-- Organic Vegetables -->
-        <div class="col-md-4">
-            <div class="p-4 bg-success text-white rounded shadow animate-card">
-                <img src="collections/vegi.jpg" alt="Organic Vegetables" class="img-fluid rounded mb-3">
-                <h3>Organic Vegetables</h3>
-                <p>Fresh, locally sourced, and organic vegetables for a healthier lifestyle.</p>
+</div>
+<!--------------------------services--------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I enjoy building visually engaging and responsive websites that provide a seamless user experience. 
+                    Using technologies like HTML, CSS, JavaScript, Django, and MongoDB,
+                     I develop dynamic web pages that are both functional and aesthetically pleasing</p>
+                   <a href="#">learn more</a>
             </div>
-        </div>
-
-        <!-- Content in between the two sections -->
-        <div class="col-md-4">
-            <div class="p-4 bg-light text-dark rounded shadow">
-                <h4>Explore the Best of Nature</h4>
-                <p>We offer a wide range of healthy organic products to choose from. Discover fresh vegetables and fruits that are sustainably grown and harvested with care. Our commitment to organic farming means that our products are free from harmful pesticides and chemicals, ensuring that you receive the highest quality produce directly from nature’s bounty. Whether you are looking to improve your health, support local farmers, or make environmentally conscious choices, we provide fresh, organic options to meet your needs. Experience the true flavors of farm-to-table goodness with every bite! Our products are not only beneficial to your health but also contribute to a more sustainable and eco-friendly future. By choosing organic, you are investing in a cleaner, greener planet for future generations.</p>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>I focus on creating intuitive and user-friendly interfaces by implementing wireframing, prototyping, and usability testing. 
+                    My goal is to enhance user experiences by designing interactive and efficient digital solutions that meet user needs.</p>
+                   <a href="#">learn more</a>
             </div>
-        </div>
-
-        <!-- Organic Fruits -->
-        <div class="col-md-4">
-            <div class="p-4 bg-warning text-dark rounded shadow animate-card">
-                <img src="collections/fruits.jpg" alt="Organic Fruits" class="img-fluid rounded mb-3">
-                <h3>Organic Fruits</h3>
-                <p>Enjoy the taste of organic fruits, full of natural goodness.</p>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>I develop innovative mobile and desktop applications with a strong emphasis on functionality, security, and performance. From AI-powered assistants to finance and productivity tools, I build applications that solve real-world problems while ensuring a smooth user experience.</p>
+                   <a href="#">learn more</a>
             </div>
         </div>
     </div>
-</section>
-
-
-
-
-    <!-- About Us Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="animate-fade-in">About Us</h2>
-            <p class="lead">We are dedicated to providing high-quality organic produce directly from farms to your table. At AgriShop, we ensure freshness and transparency in every step of our supply chain.</p>
-            <img src="collections/abouts.jpg" alt="About Us" class="img-fluid rounded shadow">
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 bg-secondary text-white">
-        <div class="container text-center">
-            <h2>Customer Testimonials</h2>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 rounded shadow animate-card">
-                        <h3>★★★★★</h3>
-                        <p>Excellent service and fresh produce!</p>
-                    </div>
+</div>
+<!------------------Portfolio------------------->
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="collection/agriculture ecommerce.png">
+                <div class="layer">
+                    <h3>Agri Link</h3>
+                    <p>Agri-Link is a full-stack app using IoT, AI, ML, and blockchain to enhance transparency and efficiency in the agricultural supply chain</p>
+                    <a href="https://github.com/maryflorance/Agri-Link/tree/main"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 rounded shadow animate-card">
-                        <h3>★★★★★</h3>
-                        <p>Highly recommend for organic lovers.</p>
-                    </div>
+            </div>
+            <div class="work">
+                <img src="collection/vrpic.png.png">
+                <div class="layer">
+                    <h3>Online Website</h3>
+                    <p>3D virtual environment for real-time product browsing and interactions</p>
+                    <a href="https://github.com/maryflorance/Virtual-try-on"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card p-4 rounded shadow animate-card">
-                        <h3>★★★★★</h3>
-                        <p>Affordable prices and great quality.</p>
-                    </div>
+            </div>
+            <div class="work">
+                <img src="collection/iot.png.png">
+                <div class="layer">
+                    <h3>Device</h3>
+                    <p>IoT-based system to monitor temperature and moisture levels. The solution includes an alert system for real-time notifications</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="collection/voice.jpg">
+                <div class="layer">
+                    <h3>Voice Assistant</h3>
+                    <p>This is a Python-based voice assistant that can perform tasks like telling the time, checking the weather, sending emails, and more</p>
+                    <a href="https://github.com/maryflorance/OasisInfobyte_Voice_Assistant"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="collection/pass.png">
+                <div class="layer">
+                    <h3>Password Generator</h3>
+                    <p>This is a A Python-based advanced password generator with a graphical user interface (GUI) built using Tkinter.</p>
+                    <a href="https://github.com/maryflorance/OasisInfobyte_Random_Password_Generator/tree/main"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="collection/weather.jpg">
+                <div class="layer">
+                    <h3>Basic Weather App</h3>
+                    <p>This is a Python-based weather application that uses the OpenWeatherMap API and Tkinter for the GUI.</p>
+                    <a href="https://github.com/maryflorance/OasisInfobyte_Weather_app"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="collection/Banking application.png">
+                <div class="layer">
+                    <h3>Banking Application</h3>
+                    <p>This is a Java-Based Banking Application that can perform banking operations such as deposits, withdrawals, checking balances, and exiting the program</p>
+                    <a href="https://github.com/maryflorance/CodeAlpha_BankingApplication"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="collection/travel.png">
+                <div class="layer">
+                    <h3>Travel Itinerary Planner</h3>
+                    <p>A Java-based Travel Itinerary Planner that generates detailed plans with maps, weather updates, and budget calculations</p>
+                    <a href="https://github.com/maryflorance/CodeAlpha_TravelItineraryPlanner/tree/main"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="animate-fade-in">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="collections/fresh.jpg" alt="Service 1" class="img-fluid rounded shadow animate-card">
-                    <h4>Fresh Produce Delivery</h4>
-                </div>
-                <div class="col-md-4">
-                    <img src="collections/org farm.jpg" alt="Service 2" class="img-fluid rounded shadow animate-card">
-                    <h4>Organic Farming Consulting</h4>
-                </div>
-                <div class="col-md-4">
-                    <img src="collections/trans sup.jpg" alt="Service 3" class="img-fluid rounded shadow animate-card">
-                    <h4>Transparent Supply Chain</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- Features Section (Updated Background) -->
-<section id="features" class="py-5 text-white" style="background-color: #ffd1b3;">
-    <div class="container text-center features-box">
-        <h2>Features</h2>
-        <ul class="list-group">
-            <li class="list-group-item feature-item">Fresh Farm Produce</li>
-            <li class="list-group-item feature-item">100% Organic Guarantee</li>
-            <li class="list-group-item feature-item">Flexible Payment Options</li>
-        </ul>
+        <a href="#" class="btn">See more</a>
     </div>
-</section>
-
-
-
-    <!-- Why Choose Us Section (Updated Background) -->
-<section id="why-choose-us" class="py-5 text-dark" style="background-color: #ffffff;">
-    <div class="container text-center">
-        <img src="collections/why.jpg" alt="Why Choose Us" class="img-fluid rounded shadow animate-card">
-        <div>
-            <h2>Why Choose Us?</h2>
-            <p>We are committed to quality, sustainability, and customer satisfaction. Choose AgriShop for the best organic experience! Our products are sourced from trusted farmers, ensuring that every item is fresh, healthy, and responsibly grown. With flexible delivery options, we make it easy for you to enjoy organic produce right at your doorstep.</p>
+</div>
+<!--------------------------------Contact------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> maryflorance2004@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9676999545</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mary-florance-bonthapuri-5229332a9"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/maryflorance"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="collection/My CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">hello</span>
+            </div>
         </div>
     </div>
-</section>
-
-
-<!-- Contact Section (Enhanced) -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="animate-fade-in mb-5">Contact Us</h2>
-        <div class="row justify-content-center">
-            <!-- Comment Section Box -->
-<!-- Comment Section Box -->
-<div class="col-md-5 mb-4">
-    <div class="comment-box p-4 bg-white shadow rounded">
-        <h3 class="mb-4 text-center">Ask Your Queries</h3> <!-- Heading Added -->
-        <form name="submit-to-google-sheet">
-            <div class="mb-4">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="mb-4">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="mb-4">
-                <label for="comment" class="form-label">Your Query</label>
-                <textarea class="form-control" id="comment" rows="4" placeholder="Leave your comment here" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-        </form>
+    <div class="copyright">
+        <p>Copyright © 2025 Mary Florance <i class="fa-solid fa-heart"></i> All Rights Reserved.</p>
     </div>
 </div>
 
+
+
+
 <script>
-// JavaScript to handle comment submission and display in the testimonials section
-document.getElementById('comment-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const comment = document.getElementById('comment').value;
 
-    // Create new testimonial item
-    const testimonial = document.createElement('div');
-    testimonial.classList.add('col-md-4', 'mb-4');
-    testimonial.innerHTML = `
-        <div class="testimonial-box p-4 bg-white shadow rounded">
-            <p><strong>${name}</strong></p>
-            <p>${comment}</p>
-        </div>
-    `;
-
-    // Add the new testimonial to the testimonials section
-    document.getElementById('testimonials-list').appendChild(testimonial);
-
-    // Clear the form
-    document.getElementById('comment-form').reset();
-});
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
 </script>
 
+<script>
 
-            <!-- Contact Information Box -->
-            <div class="col-md-5 mb-4">
-                <div class="contact-info-box p-4 bg-white shadow rounded">
-                    <h4>Our Contact Details</h4>
-                    <ul class="list-unstyled">
-                        <li class="d-flex align-items-center mb-3">
-                            <i class="bi bi-telephone-fill me-3" style="font-size: 1.2em;"></i>
-                            <strong>Phone:</strong> 
-                            <a href="tel:+11234567890" class="text-dark ms-2">+1 (123) 456-7890</a>
-                        </li>
-                        <li class="d-flex align-items-center mb-3">
-                            <i class="bi bi-envelope-fill me-3" style="font-size: 1.2em;"></i>
-                            <strong>Email:</strong> 
-                            <a href="mailto:contact@agrishop.com" class="text-dark ms-2">contact@agrishop.com</a>
-                        </li>
-                        <li class="d-flex align-items-center mb-3">
-                            <i class="bi bi-geo-alt-fill me-3" style="font-size: 1.2em;"></i>
-                            <strong>Address:</strong> 123 Farm Road, Cityville, Country
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="text-center">
-                        <p class="text-muted">We'd love to hear from you!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    var sidemenu=document.getElementById("sidemenu");
 
-<!-- Include Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
 
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
 
-<!-- FAQ Section -->
-<section id="faq" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="mb-5">Frequently Asked Questions</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        What is the best way to contact you?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        You can contact us via the contact form or by reaching out through our provided email and phone number.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        How do I know if my order has been processed?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        You will receive an email notification once your order has been successfully processed and shipped.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Can I modify my order after it has been placed?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Once the order is placed, it cannot be modified. Please contact our support team immediately if you need any adjustments.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        What payment methods do you accept?
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        We accept various payment methods, including credit/debit cards, PayPal, and bank transfers.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Do you offer international shipping?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes, we offer international shipping to most countries. Shipping fees and delivery times vary based on your location.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        What is your return policy?
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        We accept returns within 30 days of purchase. Items must be unused and in their original packaging.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        How can I track my order?
-                    </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        You will receive a tracking number once your order has been shipped. You can use this number to track your order on our website or through the courier's tracking portal.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</script>
 
-<!-- FAQ Section ends here-->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbymj6a7hVhjYG9EZQTxTcgV01Icj9WFeHFGewEerM45fSA5XBRw-YmMLYiBE8RDWWrn/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
 
-<!-- Social Media Section -->
-<section id="social" class="py-5">
-    <div class="container text-center">
-        <h2 class="mb-5">Follow Us</h2>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="me-4">
-                <i class="bi bi-facebook" style="font-size: 1.5em;"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="me-4">
-                <i class="bi bi-twitter" style="font-size: 1.5em;"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="me-4">
-                <i class="bi bi-instagram" style="font-size: 1.5em;"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="me-4">
-                <i class="bi bi-linkedin" style="font-size: 1.5em;"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 AgriLink. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHwhkaic4g2FOr8ni_Ou4s2yteFtZ-am_GWeMt3PMGa1sndYbKbaRhTfoQMA-ne3eo/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            },5000)
+            form.reset()
         })
-      </script>
-    <script src="//code.tidio.co/m9az5fy5lmsmpxagsjv3o5uzeagft9b7.js" async></script>
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
 </html>
